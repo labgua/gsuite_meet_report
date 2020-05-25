@@ -1,2 +1,4 @@
 # gsuite_meet_report
-A simple Google App Script that create a report of Google Meet conferences
+
+This is a simple Google App Script that create a report of Google Meet conferences using the GSuite Admin SDK.
+The script create a simple service using the scalable technology of Google App Script to make Google Spreadsheets of the report in the shared Google Drive directory "/tmp/reports"
