@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <base target="_top">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" crossorigin="anonymous">
+    <style>
+      .txt_meet_code{ font-size: 30px !important; }
+      .txt_link_doc{ font-size: 15px !important; }
+      .copyright{ font-size:15px !important; }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+    
+      <div class="jumbotron">
+	    <h1><a href="http://pantanews.ddns.net:5000">Gsuite Meet Report</a></h1>
+        <p class="copyright">Made with Love from <a href="https://github.com/labgua">LABGUA SOFTWARE 2020</a> </p>
+	    <p>Genera il tuo report Google Meet</p>
+        
+        <? if( !data["meet_code"] ){ ?>
+           <form action="<?= ScriptApp.getService().getUrl() ?>" method="post" >
+             <p>Codice Meet : <input type="text" name="code" />
+             <input class="btn btn-success" type="submit" value="Richiedi" />             
+           </form>
+        <? } else { ?>  
+             <div class="repo_status">
+               <p>il tuo report è stato generato correttamente.</p>
+               <p class="txt_meet_code"><?= data["meet_code"] ?></p>
+               <p class="txt_link_doc"> <a href="<?= data["link_doc"] ?>"><?= data["link_doc"] ?></a> </p>            
+             </div>
+         <? } ?>
+      </div>
+      
+    </div>
+  </body>
+</html>
+
+
